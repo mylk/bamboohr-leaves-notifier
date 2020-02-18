@@ -1,0 +1,43 @@
+{
+    "name": "mylk/bamboohr-leaves-notifier",
+    "description": "A notifier for BambooHR leaves",
+    "type": "project",
+    "keywords": [
+        "bamboohr",
+        "notification"
+    ],
+    "homepage": "http://github.com/mylk/bamboohr-leaves-notifier",
+    "license": "GPL-2.0",
+    "support": {
+        "issues": "https://github.com/mylk/bamboohr-leaves-notifier/issues"
+    },
+    "authors": [
+        {
+            "name": "Kostas Milonas",
+            "email": "milonas.ko@gmail.com",
+            "homepage": "http://mylk.github.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/console": "^4.3",
+        "symfony/yaml": "^4.3",
+        "symfony/dependency-injection": "^4.3",
+        "symfony/config": "^4.3",
+        "doctrine/orm": "^2.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.2.*",
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpmd/phpmd": "^2.6"
+    },
+    "bin": [
+        "bamboohrleaves"
+    ],
+    "autoload": {
+        "psr-4": {
+            "BambooHrLeavesNotifier\\": "src/"
+        }
+    }
+}

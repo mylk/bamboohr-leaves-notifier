@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+use BambooHrLeavesNotifier\Factory\EntityManagerFactory;
+
+require_once "bootstrap.php";
+
+$poll = new BambooHrLeavesNotifier\Command\PollCommand();
+$poll->setContainer($containerBuilder);
+
+$version = $containerBuilder->getParameter("version");
+
+$app = new Application("A notifier for BambooHR leaves.", $version);
+$app->add($poll);
+$app->run();

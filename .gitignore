@@ -1,0 +1,9 @@
+config/config.yaml
+db.sqlite
+vendor/
+
+# IDEs
+.buildpath
+.idea/
+.project
+.settings/
