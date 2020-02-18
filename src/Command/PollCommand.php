@@ -20,10 +20,16 @@ class PollCommand extends ContainerAwareCommand
     {
     	$repo = $this->getContainer()->get("entity_manager")->getRepository(Leave::class);
 
-    	$leaves = $repo->findAll();
-    	foreach ($leaves as $leave) {
-    		$output->writeln($leave->getName());
+        $leaveLast = $repo->findOneBy([], ["createdAt" => "DESC"], 1);
+        if ($leaveLast) {
+		    $output->writeln(sprintf(
+			    "Last leave is by %s %s.",
+			    $leaveLast->getCreatedBy()->getFirstName(),
+			    $leaveLast->getCreatedBy()->getLastName()
+		    ));
+		    return;
 	    }
-	    $output->writeln("Hello, world!");
+
+	    $output->writeln("No leaves found.");
     }
 }
