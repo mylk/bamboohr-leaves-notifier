@@ -31,5 +31,16 @@ class PollCommand extends ContainerAwareCommand
 	    }
 
 	    $output->writeln("No leaves found.");
+
+	    $client = $this->getContainer()->get("bamboohr_client");
+	    $employees = $client->getEmployees();
+	    if (!$employees) {
+		    $output->writeln("No Employees found.");
+		    return;
+	    }
+
+	    foreach ($employees as $employee) {
+		    $output->writeln(sprintf("%s %s (#%s)", $employee['firstName'], $employee['lastName'], $employee['id']));
+	    }
     }
 }

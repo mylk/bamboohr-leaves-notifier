@@ -1,0 +1,10 @@
+parameters:
+    version: 0.2.0
+
+    database:
+        driver: "pdo_sqlite"
+        path: "../../db.sqlite"
+
+    bamboo_hr:
+        company_name: "mylk"
+        api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

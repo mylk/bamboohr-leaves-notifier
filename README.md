@@ -31,8 +31,9 @@ cd bamboohr-leaves-notifier
 bamboohrleaves list
 ```
 
-Configure `config/parameters.example.yaml` file to meet your team and notification configurations
-and rename to `config/parameters.yaml`.
+Copy `config/parameters.example.yaml` to `config/parameters.yaml` and modify it to your BambooHR API settings.
+Also copy`config/config.example.yaml` to `config/config.yaml` and configure it to meet your team
+and notification needs.
 
 To poll for changes on leaves:
 

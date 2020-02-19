@@ -1,1 +1,5 @@
-services: ~
+services:
+    bamboohr_client:
+        class: BambooHrLeavesNotifier\Service\BambooHrClient
+        arguments:
+            - "@=container.getParameterBag()"

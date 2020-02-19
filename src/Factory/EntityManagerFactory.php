@@ -27,8 +27,8 @@ class EntityManagerFactory
 
         // database configuration parameters
         $conn = array(
-            "driver" => $parameterBag->get("db_driver"),
-            "path" => __DIR__ . "/" . $parameterBag->get("db_path"),
+            "driver" => $parameterBag->get("database")["driver"],
+            "path" => __DIR__ . "/" . $parameterBag->get("database")["path"],
         );
 
         // obtaining the entity manager

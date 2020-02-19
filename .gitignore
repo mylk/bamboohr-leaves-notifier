@@ -1,4 +1,5 @@
 config/config.yaml
+config/parameters.yaml
 db.sqlite
 vendor/
 
